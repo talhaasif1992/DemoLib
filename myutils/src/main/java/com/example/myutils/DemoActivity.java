@@ -8,16 +8,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myutils.ViewModel.CarViewModel;
 
-public class MainActivity extends AppCompatActivity {
+public class DemoActivity extends AppCompatActivity {
 
     public CarViewModel carViewModel;
     public ACApp acApp;
-    public static MainActivity mainActivity;
+    public static DemoActivity demoActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mainActivity = this;
+        demoActivity = this;
         carViewModel = DaggerCarViewModelInjector.create().getCarViewModel().getCar();
 
 //        Car hondaCar = DICarFactory.getCar();
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static Activity getInstance(){
-        return mainActivity;
+        return demoActivity;
     }
     public void OpenAc()
     {
