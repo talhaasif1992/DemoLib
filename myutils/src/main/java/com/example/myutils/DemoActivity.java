@@ -1,6 +1,7 @@
 package com.example.myutils;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -23,13 +24,15 @@ public class DemoActivity extends AppCompatActivity {
 //        Car hondaCar = DICarFactory.getCar();
 //        hondaCar.driveCar();
 
+       // OpenAc(getApplicationContext());
     }
 
-    public static DemoActivity getInstance(){
-        return demoActivity;
-    }
-    public void OpenAc()
+    public static void OpenAc(Context context)
     {
-        startActivity(new Intent(getApplicationContext(),ACApp.class));
+        Intent login = new Intent(context, ACApp.class);
+        login.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(login);
     }
+
+
 }
