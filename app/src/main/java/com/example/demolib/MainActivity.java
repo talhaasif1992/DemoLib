@@ -2,8 +2,11 @@ package com.example.demolib;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.myutils.ACApp;
+import com.example.myutils.CarViewModelInjector;
 import com.example.myutils.DaggerCarViewModelInjector;
 import com.example.myutils.ViewModel.CarViewModel;
 
@@ -16,6 +19,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         carViewModel = DaggerCarViewModelInjector.create().getCarViewModel().getCar();
+
+        launcherAC();
+
+
+
+
+    }
+
+
+    public void launcherAC() {
+        startActivity(new Intent(getApplicationContext(), ACApp.class));
+        finish();
 
 
     }
