@@ -26,7 +26,6 @@ public class CarViewModel {
     }
 
     public void driveCar(){
-
         Log.d("TAG","Car is driving");
     }
 }

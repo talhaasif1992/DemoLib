@@ -20,17 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
         carViewModel = DaggerCarViewModelInjector.create().getCarViewModel().getCar();
 
-        launcherAC();
 
 
 
-
-    }
-
-
-    public void launcherAC() {
-        startActivity(new Intent(getApplicationContext(), ACApp.class));
-        finish();
 
 
     }
