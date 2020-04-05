@@ -1,5 +1,6 @@
 package com.example.myutils;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -11,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     public CarViewModel carViewModel;
     public ACApp acApp;
-    MainActivity mainActivity;
+    public static MainActivity mainActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
 //        Car hondaCar = DICarFactory.getCar();
 //        hondaCar.driveCar();
 
+    }
+
+    public static Activity getInstance(){
+        return mainActivity;
     }
     public void OpenAc()
     {
