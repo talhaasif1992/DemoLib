@@ -25,7 +25,7 @@ public class DemoActivity extends AppCompatActivity {
 
     }
 
-    public static Activity getInstance(){
+    public static DemoActivity getInstance(){
         return demoActivity;
     }
     public void OpenAc()
